@@ -12,4 +12,12 @@ impl OperationType {
             OperationType::Multiplication => "*",
         }
     }
+
+    pub fn perform(&self, x: i64, y: i64) -> Option<i64> {
+        match self {
+            OperationType::Addition => Some(x + y),
+            OperationType::Subtraction => Some(x - y),
+            OperationType::Multiplication => Some(x * y),
+        }
+    }
 }
